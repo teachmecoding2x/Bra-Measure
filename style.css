@@ -1,0 +1,66 @@
+/* Ensure the calculator container adjusts to the viewport */
+.container {
+    max-width: 100%;
+    width: 90%;
+    margin: 0 auto;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+/* Flexbox layout for better responsiveness */
+.calculator {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+/* Inputs and dropdowns adapt to screen size */
+.calculator input,
+.calculator select {
+    width: 100%;
+    max-width: 300px;
+    padding: 10px;
+    margin: 10px 0;
+    box-sizing: border-box;
+    font-size: 16px;
+}
+
+/* Buttons are responsive too */
+.calculator button {
+    width: 100%;
+    max-width: 200px;
+    padding: 10px;
+    margin: 10px auto;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+/* Media query for larger screens */
+@media (min-width: 768px) {
+    .calculator {
+        flex-wrap: nowrap;
+    }
+
+    .calculator input,
+    .calculator select {
+        width: 45%; /* Two columns side by side */
+    }
+
+    .calculator button {
+        width: 30%; /* Center the button */
+    }
+}
+
+/* Optional: Add some visual tweaks */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f9f9f9;
+    color: #333;
+}
+
+h1 {
+    text-align: center;
+    margin: 20px 0;
+    font-size: 24px;
+}
